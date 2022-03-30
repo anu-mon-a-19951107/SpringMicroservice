@@ -1,0 +1,28 @@
+server:
+  port: 9001
+ 
+spring:
+  application:
+    name: DEPARTMENT-SERVICE
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/department
+    username: postgres
+    password: 1234567890
+    driverClassName: org.postgresql.Driver
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+      hostname: localhost
+      
